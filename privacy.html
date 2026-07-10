@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PLE — Gizlilik Politikası</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    max-width: 720px; margin: 0 auto; padding: 24px 20px 64px;
+    line-height: 1.65; color: #1f2430; background: #fafaff;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e3e6ef; background: #0d1117; }
+    a { color: #8ab4f8; }
+  }
+  h1 { font-size: 1.6rem; margin-bottom: 4px; }
+  h2 { font-size: 1.15rem; margin-top: 32px; }
+  .meta { color: #777; font-size: .9rem; margin-bottom: 24px; }
+  ul { padding-left: 20px; }
+</style>
+</head>
+<body>
+
+<h1>PLE — Gizlilik Politikası</h1>
+<p class="meta">Personal Life Essentials (paket: com.erinde.vfurdev.ple) · Yürürlük: 10 Temmuz 2026</p>
+
+<p>PLE, verilerinizi öncelikle cihazınızda saklayan (local-first) bir yaşam
+takip uygulamasıdır. Bu politika hangi verilerin toplandığını, nasıl
+kullanıldığını ve haklarınızı açıklar.</p>
+
+<h2>Toplanan veriler</h2>
+<ul>
+  <li><strong>Hesap:</strong> e-posta adresi (veya Google ile giriş bilgisi) ve profil adı.</li>
+  <li><strong>Uygulama içeriği:</strong> alışkanlık, görev, finans (gelir-gider, bütçe), sağlık (su, uyku, adım) ve hedef kayıtları.</li>
+  <li><strong>Fiş tarama:</strong> fiş görüntüsü yalnızca cihazda işlenir (Google ML Kit, cihaz üzerinde OCR); görüntü hiçbir sunucuya gönderilmez ve saklanmaz. Kayda yalnızca tutar, tarih, döviz, kategori ve mağaza adı geçer.</li>
+</ul>
+
+<h2>Verilerin saklanması ve senkronizasyon</h2>
+<p>Veriler önce cihazınızdaki yerel veritabanında tutulur; internet olmadan
+uygulama çalışır. Hesabınızla giriş yaptığınızda verileriniz, hesabınıza bağlı
+olarak Supabase altyapısında yedeklenir/senkronize edilir. Verilerinize satır
+düzeyi güvenlik (RLS) ile yalnızca sizin hesabınız erişebilir.</p>
+
+<h2>Yapay zekâ özellikleri</h2>
+<p>Günlük özet ve koç sohbeti isteğe bağlıdır. Kullandığınızda, panel verinizin
+özeti ve sohbet mesajlarınız sunucumuz üzerinden Google Vertex AI (Gemini)
+servisine iletilir ve yanıt üretmek için kullanılır. API anahtarları asla
+cihazda tutulmaz. Bu veriler reklam amacıyla kullanılmaz.</p>
+
+<h2>Üçüncü taraf hizmetler</h2>
+<ul>
+  <li><strong>Supabase</strong> — kimlik doğrulama ve bulut yedekleme.</li>
+  <li><strong>Google Vertex AI</strong> — isteğe bağlı AI özet/koç yanıtları.</li>
+  <li><strong>Google Play Faturalandırma / RevenueCat</strong> — abonelik yönetimi (ödeme bilgileriniz bize ulaşmaz).</li>
+  <li><strong>Google ML Kit</strong> — cihaz üzerinde fiş OCR (veri cihaz dışına çıkmaz).</li>
+</ul>
+
+<h2>İzinler</h2>
+<ul>
+  <li><strong>Kamera / Galeri:</strong> yalnızca fiş taramak için, siz başlattığınızda.</li>
+  <li><strong>Bildirimler:</strong> alışkanlık/görev hatırlatmaları için.</li>
+</ul>
+
+<h2>Veri silme</h2>
+<ul>
+  <li><strong>Cihazdaki veriler:</strong> Ayarlar → «Yerel verileri sil».</li>
+  <li><strong>Hesap ve bulut verileri:</strong> Ayarlar → «Hesabı sil» — hesabınız ve sunucudaki tüm verileriniz kalıcı olarak silinir.</li>
+</ul>
+
+<h2>KVKK aydınlatması (özet)</h2>
+<p><strong>Veri sorumlusu:</strong> PLE geliştirici ekibi (ErinDev / FurDev).
+<strong>İşleme amaçları:</strong> uygulamanın temel işlevleri, isteğe bağlı
+yedekleme ve AI özet. <strong>Hukuki sebep:</strong> sözleşmenin ifası ve meşru
+menfaat; gereken durumlarda açık rıza (bildirim, kamera) ayrıca alınır.
+<strong>Saklama süresi:</strong> hesabınız silinene veya veri silme
+özelliklerini kullanana kadar. KVKK m.11 kapsamındaki talepleriniz için
+aşağıdaki iletişim adresini kullanabilirsiniz.</p>
+
+<h2>Değişiklikler</h2>
+<p>Bu politika güncellendiğinde bu sayfada yayımlanır; önemli değişiklikler
+uygulama içinden duyurulur.</p>
+
+<h2>İletişim</h2>
+<p>Sorular ve veri talepleri: <a href="mailto:erinogus@gmail.com">erinogus@gmail.com</a></p>
+
+</body>
+</html>
